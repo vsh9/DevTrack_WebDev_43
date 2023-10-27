@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat-oneer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Cat-oneer</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Quiz</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="moon1.png" id="moon">
+        <img src="mountbehind.png" id="mountainbehind">
+        <h2 id="text">Cat-oneer</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountfront.png" id="mountainfront">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About the questionaire</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, placeat quae magni iste nobis eius! Velit cum ea autem porro nisi rem provident quasi, consectetur
+             labore sunt laborum quo pariatur?</p>
+    </div>
+    <script>
+        let moon =document.getElementById('moon');
+        let mountainbehind =document.getElementById('mountainbehind');
+        let text =document.getElementById('text');
+        let btn =document.getElementById('btn');
+        let mountainfront=document.getElementById('mountainfront');
+        let header=document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            moon.style.top = value * 1.05 + 'px';
+            mountainbehind.style.top = value * 0.05 + 'px';
+            mountainfront.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginRight = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
+
+
