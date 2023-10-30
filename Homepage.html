@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat-oneer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Cat-oneer</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Quiz</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="moon1.png" id="moon">
+        <img src="mountbehind.png" id="mountainbehind">
+        <h2 id="text">Cat-oneer</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountfront.png" id="mountainfront">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About the questionaire</h2>
+        <p> Our questionaire consists of questions which comes under fantasy if we 
+            are talking with respect to genre.Overall our questionaire basically
+            aims to give a fun experience to all the users out there.The end point 
+            of our questionaire is a character which the user has attained depending
+            on their choices which they have chosen during the questionaire process.</p>
+        <h2>About the website</h2>
+        <p>
+            Our website aims to give all the anorks out there a fun experience by
+    answering our specially designed questionaire which gives a boost to 
+    their imagination to run wild while figuring out the lore of all the 
+    possible characters that they could obtain.To make things a bit more fun
+    all of our characters are "cat-fied".</br>
+    (Warning : Our characters may make you experience a feeling called nostalgia)
+        </p>
+    </div>
+    <script>
+        let moon =document.getElementById('moon');
+        let mountainbehind =document.getElementById('mountainbehind');
+        let text =document.getElementById('text');
+        let btn =document.getElementById('btn');
+        let mountainfront=document.getElementById('mountainfront');
+        let header=document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            moon.style.top = value * 1.05 + 'px';
+            mountainbehind.style.top = value * 0.05 + 'px';
+            mountainfront.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginRight = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
+
+
